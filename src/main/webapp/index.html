@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<img class="wave" src="assets/Image/WAVE2.jpg">
+<div class="container">
+    <div class="img">
+        <!--<img src="assets/svg/bg.svg">-->
+    </div>
+    <div class="login-content">
+        <form id="login-validation">
+            <img src="assets/Image/iiitb_logo.jpg">
+            <h2 class="title">Welcome</h2>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="div">
+                    <h5>Email</h5>
+                    <input type="email" class="input" name="email" id="email" placeholder="characters@characters.domain " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+                    <h5>Password</h5>
+                    <input type="password" class="input" name="password" id="password" required>
+                </div>
+            </div>
+            <input type="submit" class="btn" value="Login">
+            <div class="alert alert-warning" role="alert" id="login-alert" style="display: none; margin-top: 20px">
+                Invalid Credentials!! Please try again :)
+            </div>
+            <p class="mt-5 mb-3 text-muted">&copy; 2020-2022</p>
+        </form>
+        <p class="invalid_login" id="invalid_login"></p>
+    </div>
+</div>
+<script type="text/javascript" src="assets/js/login-validation.js"></script>
+</body>
+</html>

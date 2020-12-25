@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.79.0">
+  <title>Checkout example · Bootstrap v5.0</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .abcd{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 50%;
+        padding-bottom: 2rem;
+        justify-content: center;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <!--<link href="assets/css/offer.css" rel="stylesheet">-->
+</head>
+<body class="bg-light">
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="assets/Image/iiitb_logo.jpg" alt="" width="72" height="57">
+      <strong><h1>Create Offer</h1></strong>
+      <p class="lead"></p>
+    </div>
+
+    <div class="row g-3">
+      <img src="assets/Image/office.jpeg" alt="Nature"  align="center" class="abcd" width="300" height="800">
+      <!--
+
+-->
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Offer Details</h4>
+        <form class="needs-validation" id="offer-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="organisation_name" class="form-label">Organization Name</label>
+              <input type="text" class="form-control" id="organisation_name" placeholder="enter the name of organization" value="" required>
+              <div class="invalid-feedback">
+                Valid organization name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="profile" class="form-label">Profile</label>
+              <input type="text" class="form-control" id="profile" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid profile is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="description" class="form-label">Description</label>
+              <div class="input-group">
+                <!--<span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username">
+                -->
+                <textarea rows="5" class="form-control" id="description" placeholder="enter job description"></textarea>
+                <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="intake" class="form-label" >Maximum Intake <span class="text-muted" ></span></label>
+              <input type="number" class="form-control" id="intake" value="1" min="0" maxlength="10" required>
+              <div class="invalid-feedback">
+                Please enter a valid intake number.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="grades" class="form-label">Minimum Grades</label>
+              <input type="number"  class="form-control" id="grades" step="0.2" min="0" max="4" value="2.4">
+              <div class="invalid-feedback">
+                Please enter a valid minimum grade.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="grades" class="form-label">Specialization</label>
+              <div class="my-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="sp" id="AI/ML" value="AI/ML"/>
+                  <label class="form-check-label" >AI/ML</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="sp" id="NC" value="NC"/>
+                  <label class="form-check-label" >NC</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="sp" id="VLSI" value="VLSI" />
+                  <label class="form-check-label" >VLSI</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="sp" id="TSCD" value="TSCD"/>
+                  <label class="form-check-label" >TSCD</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="grades" class="form-label">Domain</label>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="dm" id="IMtech" value="IMtech"/>
+                  <label class="form-check-label" >IMTech</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="dm" id="Mtech" value="Mtech"/>
+                  <label class="form-check-label" >MTech</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="dm" id="Ms" value="Ms" />
+                  <label class="form-check-label" >MS</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="dm" id="Phd" value="Phd"/>
+                  <label class="form-check-label" >Phd</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" id="submit" type="submit">Submit</button>
+          <div class="alert alert-warning" role="alert" id="offer-alert" style="display: none; margin-top: 20px">
+            Some error occurred!!
+          </div>
+          <div class="alert alert-success" role="alert" id="offer-success" style="display: none; margin-top: 20px">
+            Details saved successfully!!
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/offer-validation.js"></script>
+</body>
+</html>
